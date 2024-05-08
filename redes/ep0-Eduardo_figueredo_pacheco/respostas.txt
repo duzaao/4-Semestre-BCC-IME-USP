@@ -1,0 +1,40 @@
+Parte 1. 
+
+1 -  Youtube.com
+
+
+    Ao analisar o IP, utilizando o whois, foi possível concluir que aquela mensagem TCP era oriunda do google cloud service e sendo essa a única
+    aplicação/software do google foi possível concluir que essa era a origem.
+
+    endereço IP fonte : 35.241.45.82
+    endereço IP destino : 192.168.15.11
+
+    MAC destino : 60:e3:2b:b5:ad:ce
+    MAC origem : 98:7e:ca:d1:dd:c0
+
+    protocolo : TCP 
+    2 - Servidor do cloudfare
+
+    Ao analisar o IP, utilizando o whois, foi possível concluir que aquela mensagem TCP era oriunda do cloudfare. 
+    cloudfare é uma empresa que fornece serviços de DNS, CDN, proteção contra DDoS e segurança na Internet.
+
+    endereço IP fonte : 192.168.15.11
+    endereço IP destino : 162.159.130.234
+
+    MAC destino : 98:7e:ca:d1:dd:c0
+    MAC origem : 60:e3:2b:b5:ad:ce
+
+    Protocolo: TCP 
+
+
+
+Parte 2.
+
+o tempo para a transferência total foi de 0,0972 segundos.
+
+61980% a mais de bites que o site. 
+
+O calculo foi feito somando manualmente os bites das transferências oriundas do IP 200.144.244.77, que é o servidor do IME.
+e depois dividindo isso por 10, que é o número de bites do site.
+
+

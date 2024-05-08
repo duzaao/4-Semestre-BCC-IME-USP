@@ -1,0 +1,17 @@
+tokenize :: String -> [Token]
+tokenize [] = []
+tokenize [c] = if isSymbolChar c then [c] : [] else []
+tokenize str@(c1:c2:cs)
+  | c1 == '(' || c1 == ')' = [c1] : tokenize (c2:cs)
+  | not (null cs) && c1 == '=' && c2 == '=' = "==" : tokenize cs
+  | not (null cs) && c1 == '>' && c2 == '=' = ">=" : tokenize cs
+  | not (null cs) && c1 == '<' && c2 == '=' = "<=" : tokenize cs
+  | isNumeralChar c1 = accumulate isNumeralChar 
+  | isSymbolChar c1 = accumulate isSymbolChar 
+  | otherwise = tokenize cs
+  where
+    accumulate f =
+      let token = getToken f str
+       in token : tokenize (drop (length token) str)
+
+

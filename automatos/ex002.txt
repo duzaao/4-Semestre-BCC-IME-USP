@@ -1,0 +1,12 @@
+Exercício 1 - :
+
+	e | (((a | b)a*b(ba*b)*)(e | a))+
+
+Exercício 2 :
+
+{"type":"NFA","nfa":{"transitions":{"start":{"b":["s0"],"a":["s0"]},"s0":{"b":["s1"],"a":["s2"]},"s2":{"b":["s4"]},"s4":{"b":["s0"]}},"startState":"start","acceptStates":["s0"]},"states":{"start":{},"s0":{"isAccept":true,"top":149,"left":220,"displayId":"s0"},"s1":{"top":404,"left":237,"displayId":"s1"},"s2":{"top":171,"left":406,"displayId":"s2"},"s4":{"top":58,"left":423,"displayId":"s4"}},"transitions":[{"stateA":"start","label":"b","stateB":"s0"},{"stateA":"start","label":"a","stateB":"s0"},{"stateA":"s0","label":"b","stateB":"s1"},{"stateA":"s0","label":"a","stateB":"s2"},{"stateA":"s2","label":"b","stateB":"s4"},{"stateA":"s4","label":"b","stateB":"s0"}],"bulkTests":{"accept":"","reject":""}}
+
+Exercicio 3 : 
+
+{"type":"NFA","nfa":{"transitions":{"start":{"a":["s0","s1"]},"s0":{"a":["s0"]},"s1":{"b":["s2"]},"s2":{"a":["s1"]}},"startState":"start","acceptStates":["s0","s2"]},"states":{"start":{},"s0":{"isAccept":true,"top":223,"left":221,"displayId":"s0"},"s1":{"top":413,"left":249,"displayId":"s1"},"s2":{"isAccept":true,"top":431,"left":559,"displayId":"s2"}},"transitions":[{"stateA":"start","label":"a","stateB":"s0"},{"stateA":"start","label":"a","stateB":"s1"},{"stateA":"s0","label":"a","stateB":"s0"},{"stateA":"s1","label":"b","stateB":"s2"},{"stateA":"s2","label":"a","stateB":"s1"}],"bulkTests":{"accept":"","reject":""}}
+
